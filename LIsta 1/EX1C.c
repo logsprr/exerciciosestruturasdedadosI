@@ -35,3 +35,6 @@ int main()
         printf("%d \n",vet30[i]);
     }
 }
+
+
+//nao esta pronta
