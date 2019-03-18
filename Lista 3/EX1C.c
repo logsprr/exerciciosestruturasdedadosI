@@ -9,10 +9,13 @@ struct cliente{
 };
 void cadastra(){
     struct cliente Cliente;
-    printf("Digite o nome do Cliente:\n");
-    fgets(Cliente.nome,sizeof(nome),stdin);
-    printf("Quanto vai depositar ? \n");
-    scanf("%f",&Cliente.saldo);
+    for(i=0;i<5;i++){
+        printf("Digite o nome do Cliente:\n");
+        fgets(Cliente.nome[i],sizeof(nome),stdin);
+        printf("Quanto vai depositar ? \n");
+        scanf("%f",&Cliente.saldo[i]);
+    }
+
 }
 void vecliente(){
     printf("Digite o codigo de sua conta:\n");
@@ -21,9 +24,9 @@ void vecliente(){
     scanf("%d",&op);
     for(i=0;i<5;i++){
         if(numconta == op){
-            printf("NOme :");
-            printf("Saldo : ");
-            printf("DEbitos :");
+            printf("NOme : %c");
+            printf("Saldo :%f ");
+            printf("DEbitos:%f:");
         }
     }
 }
