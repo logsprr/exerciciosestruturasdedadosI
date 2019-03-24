@@ -3,30 +3,34 @@
 
 struct cliente{
     char nome[50];
-    float debitos = 15; //juros
+    float debitos; //juros
     float saldo;
 
 };
 void cadastra(){
-    struct cliente Cliente;
+    struct cliente Cliente[5];
+    int i;
     for(i=0;i<5;i++){
         printf("Digite o nome do Cliente:\n");
         fgets(Cliente.nome[i],sizeof(nome),stdin);
         printf("Quanto vai depositar ? \n");
+        Cliente.debitos = 15;
         scanf("%f",&Cliente.saldo[i]);
+        Cliente.saldo = Cliente.debitos - Cliente.saldo;
     }
 
 }
 void vecliente(){
+    struct cliente Cliente;
     printf("Digite o codigo de sua conta:\n");
     int i;
     int op;
     scanf("%d",&op);
     for(i=0;i<5;i++){
         if(numconta == op){
-            printf("NOme : %c");
-            printf("Saldo :%f ");
-            printf("DEbitos:%f:");
+            printf("NOme : %c",Cliente.nome[i]);
+            printf("Saldo :%f "Cliente.saldo[i]);
+            printf("DEbitos:%f:"Cliente.debitos[i]);
         }
     }
 }
@@ -106,3 +110,5 @@ int main()
     printf("")
 
 }
+
+//nao pronta
